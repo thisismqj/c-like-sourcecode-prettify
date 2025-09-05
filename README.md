@@ -44,4 +44,53 @@
 3. 测试验证：通过测试程序（如 `mpatest.cpp`）加载测试输入，执行分析并输出结果（如语法树结构），验证分析器的正确性。
 
 
+### 4. 文法
+
+extDef: extVarDef | funcDef
+
+extVarDef: type varSeq ;
+
+type: int | float | char
+
+varSeq: id, varSeq | id
+
+funcDef: type id ( params ) compStmt
+
+params: param, params | empty
+
+param: type id
+
+funcCall: id ( args )
+
+args: expr, args | empty
+
+stmt: expr ; | compStmt | return expr ; | if ( expr ) stmt | if ( expr ) stmt else stmt |
+        while (expr) stmt | do stmt while ( expr ) ; | for (exprOpt; exprOpt; exprOpt) stmt
+
+compStmt: { localVarDefs stmts }
+
+localVarDefs: localVarDef localVarDefs | empty
+
+localVarDef: type varSeq ;
+
+stmts: stmt stmts | empty
+
+expr: orExpr = expr | orExpr
+
+orExpr: andExpr || orExpr | andExpr
+
+andExpr: condExpr && andExpr | condExpr
+
+condExpr: relExpr == condExpr | relExpr != condExpr | relExpr
+
+relExpr: addExpr < relExpr | addExpr <= relExpr | addExpr > relExpr | addExpr >= relExpr | relExpr
+
+addExpr: fac + addExpr | fac - addExpr | fac
+
+fac: atomExpr * fac | atomExpr / fac | atomExpr % fac | atomExpr
+
+atomExpr: id | litInt | litChar | litFloat | litString | funcCall | ( expr ) | -atomExpr | !atomExpr
+
+
+
 总结来说，这个仓库是一个类C语言编译器前端的基础实现，聚焦于词法和语法分析，可用于学习编译器构造的基本原理，或作为简单代码分析/美化工具的基础。
