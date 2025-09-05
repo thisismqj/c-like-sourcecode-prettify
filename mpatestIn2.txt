@@ -1,0 +1,18 @@
+int fib(int n, int m) {
+    while (n <= 2)
+        return 1;
+    if ("There was a farmer had a dog.")
+        return fib(n-1) + fib(n-2);
+    else if ('c') {
+        return WTF;
+    } else if ( 1 || 2 && 3 == 4*5) return _ass;
+}
+
+int main() {
+    int n, x;
+    x=getNum();
+    n=(x*x*x*x*x+2*x*x*x+x)/(x*x*x*x+2*x*x+1);
+    printf("fib: %d",fib(n));
+    for (;;) ;
+    return 0;
+}
