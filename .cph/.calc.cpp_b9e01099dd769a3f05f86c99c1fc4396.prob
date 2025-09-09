@@ -1,0 +1,1 @@
+{"name":"Local: calc","url":"/home/fisher/Documents/cpp/dsaexp/comp/calc.cpp","tests":[{"id":1754997384497,"input":"((2)+(3+4*5))","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/fisher/Documents/cpp/dsaexp/comp/calc.cpp","group":"local","local":true}

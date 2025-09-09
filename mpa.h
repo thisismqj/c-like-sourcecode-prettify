@@ -8,6 +8,7 @@ enum NodeType {empty, src, extDef, extVarDef, type, typeInt, typeFloat, typeChar
                 condExpr, condEqExpr, condNeqExpr, relExpr, relLtExpr, relGtExpr, relLeqExpr, relGeqExpr, 
                 addExpr, addAddExpr, subAddExpr, fac, mulFac, divFac, modFac, atomExpr, 
                 id, litInt, litChar, litFloat, litString, funcCall, args, assignExpr, neg, _not};
+/*
 const char nodeTypeName [][20] = {
     "empty", "SRC", "EXT_DEF", "EXT_VAR_DEF", "type", "int", "float", "char", 
     "VAR_SEQ", "FUNC_DEF", "PARAMS", "PARAM", "STMT", "IF_STMT", "IF_ELSE_STMT", "WHILE_STMT", "DO_WHILE_STMT",
@@ -16,6 +17,16 @@ const char nodeTypeName [][20] = {
     "EQ", "NEQ", "REL_EXPR", "LT", "GT", "LEQ",
     "GEQ", "ADD_EXPR", "ADD", "SUB", "FAC", "MUL", "DIV", "MOD", "atom expr", "id", "lit int",
     "lit char", "lit float", "lit string", "func call", "ARGS", "ASSIGN", "NEG", "NOT"
+};
+*/
+const char nodeTypeName [][40] = {
+    "空", "源程序", "外部定义", "外部变量定义", "类型", "int", "float", "char", 
+    "变量序列", "函数定义", "形参列表", "形参", "语句", "if语句", "if-else语句", "while语句", "do-while语句",
+    "for语句", "返回语句", "复合语句", "局部变量定义列表", "局部变量定义", "语句列表", 
+    "表达式", "可选表达式", "或表达式", "或表达式", "且表达式", "且表达式", "条件表达式",
+    "等于", "不等于", "关系表达式", "小于", "大于", "小于等于",
+    "大于等于", "加表达式", "加", "减", "因式", "乘", "除", "取余", "原子表达式", "标识符", "整形字面量",
+    "字符型字面量", "浮点型字面量", "字符串型字面量", "函数调用", "实参列表", "赋值表达式", "负", "非"
 };
 extern SCRes *scRes;
 struct Node {

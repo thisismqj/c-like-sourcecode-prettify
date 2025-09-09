@@ -52,7 +52,8 @@ static void printInd(int cnt) {
     while (cnt-->0) printf("  ");
 }
 static void parseError(const char *s) {
-    printf("Syntax error: %s\n", s);
+    printf("Syntax error on Ln: %d, Col: %d: %s\n",
+         1+scRes->tokenLn[parsePos], 1+scRes->tokenCol[parsePos], s);
 }
 bool parseArgs(Node *fa) {
     Node *n = new Node;
@@ -868,5 +869,10 @@ bool parseSrc(Node *fa) {
     n->typ = NodeType::src;
     while (parseExtDef(n)) ;
     fa->addChild(n);
-    return 1;
+    if (parsePos == scRes->tokenSz)
+        return 1;
+    else {
+        parseError("Terminated too early!");
+        return 0;
+    }
 }

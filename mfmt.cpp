@@ -3,6 +3,16 @@
 static void printIndent(int dep) {
     while (dep--) printf("    ");
 }
+static char *floatOutput(float f) {
+    static char ans[20];
+    sprintf(ans, "%f", f);
+    int p=0;
+    while (ans[p]) ++p;
+    --p;
+    while (ans[p]=='0') --p;
+    ans[++p] = 0;
+    return ans;
+}
 void printExpr(Node *node, int dep) {
     if (node->typ==NodeType::assignExpr) {
         printOrExpr(node->son, dep);
@@ -91,6 +101,9 @@ void printFac(Node *node, int dep) {
         case NodeType::divFac:
             printf(" / ");
             break;
+        case NodeType::modFac:
+            printf(" %% ");
+            break;
         }
         printAtomExpr(node->son->bro, dep);
     } else {
@@ -115,10 +128,10 @@ void printAtomExpr(Node *node, int dep) {
         printf("%d", *(int *)&scRes->symTable[locP]);
         break;
     case NodeType::litChar:
-        printf("%c", scRes->symTable[locP]);
+        printf("'%c'", scRes->symTable[locP]);
         break;
     case NodeType::litFloat:
-        printf("%f", *(float *)&scRes->symTable[locP]);
+        printf("%s", floatOutput(*(float *)&scRes->symTable[locP]));
         break;
     case NodeType::litString:
         printf("\"%s\"", &scRes->symTable[locP]);

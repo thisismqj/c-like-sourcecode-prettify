@@ -8,7 +8,7 @@ int fib(int n) {
 int main() {
     int n, x;
     x=getNum();
-    n=(x*x*x*x*x+2*x*x*x+x)/(x*x*x*x+2*x*x+1);
+    n=(x*x*x*x*x+2%x*x*x+x)/(x*x*x*x+2*x*x+1);
     printf("fib: %d",fib(n));
     return 0;
 }

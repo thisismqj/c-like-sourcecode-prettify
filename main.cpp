@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "pa.h"
+#include "mpa.h"
 inline bool isAlpha(char ch) {return 'a'<=ch&&ch<='z'||'A'<=ch&&ch<='Z';}
 inline bool isDigit(char ch) {return '0'<=ch&&ch<='9';}
 Token readToken(FILE *fp, char **symTable) {

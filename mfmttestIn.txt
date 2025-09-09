@@ -1,9 +1,140 @@
-char main() {
-    int x, y, z;
-    float y, z, d;
-    for ('a'=='c'; 'a'<='c'; "fuck" = -func(Ass)) {
-        while (x=!y) {
-            printf("%d", -x);
-        }
-    }
-}
+源程序
+  外部定义
+    函数定义
+      int
+      id: fib
+      形参列表
+        形参
+          int
+          id: n
+      复合语句
+        局部变量定义列表
+        语句列表
+          if-else语句
+            小于等于
+              id: n
+              lit int: 2
+            返回语句
+              lit int: 1
+            if-else语句
+              大于
+                id: n
+                lit int: 2
+              返回语句
+                加
+                  函数调用
+                    id: fib
+                    实参列表
+                      减
+                        id: n
+                        lit int: 1
+                  函数调用
+                    id: fib
+                    实参列表
+                      减
+                        id: n
+                        lit int: 2
+              while语句
+                lit int: 1
+                复合语句
+                  局部变量定义列表
+                  语句列表
+                    语句
+                      函数调用
+                        id: print
+                        实参列表
+                          lit string: Hi
+  外部定义
+    函数定义
+      int
+      id: main
+      形参列表
+      复合语句
+        局部变量定义列表
+          局部变量定义
+            int
+            变量序列
+              id: n
+              id: x
+        语句列表
+          语句
+            赋值表达式
+              id: x
+              函数调用
+                id: getNum
+                实参列表
+          语句
+            赋值表达式
+              id: x
+              加
+                减
+                  加
+                    lit float: 1.240000
+                    lit int: 2
+                  lit float: 0.560000
+                id: x
+          语句
+            赋值表达式
+              id: x
+              负
+                id: x
+          语句
+            赋值表达式
+              id: x
+              函数调用
+                id: fun
+                实参列表
+                  函数调用
+                    id: fun
+                    实参列表
+                      id: x
+          语句
+            赋值表达式
+              id: n
+              除
+                加
+                  加
+                    乘
+                      乘
+                        乘
+                          乘
+                            id: x
+                            id: x
+                          id: x
+                        id: x
+                      id: x
+                    乘
+                      乘
+                        取余
+                          lit int: 2
+                          id: x
+                        id: x
+                      id: x
+                  id: x
+                加
+                  加
+                    乘
+                      乘
+                        乘
+                          id: x
+                          id: x
+                        id: x
+                      id: x
+                    乘
+                      乘
+                        lit int: 2
+                        id: x
+                      id: x
+                  lit int: 1
+          语句
+            函数调用
+              id: printf
+              实参列表
+                lit string: fib: %d
+                函数调用
+                  id: fib
+                  实参列表
+                    id: n
+          返回语句
+            lit int: 0
+

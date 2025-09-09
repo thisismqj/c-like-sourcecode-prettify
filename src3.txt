@@ -6,7 +6,7 @@ int fib(int n) {
             return fib(n-1) + fib(n-2);
         else while (1) {
             print("Hi");
-        }
+        } }
 }
 
 int main() {
@@ -19,14 +19,3 @@ int main() {
     printf("fib: %d",fib(n));
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-

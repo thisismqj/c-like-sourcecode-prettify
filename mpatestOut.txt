@@ -1,129 +1,139 @@
-SRC
-  EXT_DEF
-    FUNC_DEF
-      char
+源程序
+  外部定义
+    函数定义
+      int
+      id: fib
+      形参列表
+        形参
+          int
+          id: n
+      复合语句
+        局部变量定义列表
+        语句列表
+          if-else语句
+            小于等于
+              id: n
+              lit int: 2
+            返回语句
+              lit int: 1
+            if-else语句
+              大于
+                id: n
+                lit int: 2
+              返回语句
+                加
+                  函数调用
+                    id: fib
+                    实参列表
+                      减
+                        id: n
+                        lit int: 1
+                  函数调用
+                    id: fib
+                    实参列表
+                      减
+                        id: n
+                        lit int: 2
+              while语句
+                lit int: 1
+                复合语句
+                  局部变量定义列表
+                  语句列表
+                    语句
+                      函数调用
+                        id: print
+                        实参列表
+                          lit string: Hi
+  外部定义
+    函数定义
+      int
       id: main
-      PARAMS
-      COMP_STMT
-        LOCAL_VAR_DEFS
-          LOCAL_VAR_DEF
+      形参列表
+      复合语句
+        局部变量定义列表
+          局部变量定义
             int
-            VAR_SEQ
+            变量序列
+              id: n
               id: x
-              id: y
-              id: z
-          LOCAL_VAR_DEF
-            float
-            VAR_SEQ
-              id: y
-              id: z
-              id: d
-        STMTS
-          FOR_STMT
-            EXPR_OPT
-              EXPR
-                OR_EXPR
-                  AND_EXPR
-                    EQ
-                      COND_EXPR
-                        REL_EXPR
-                          ADD_EXPR
-                            FAC
-                              lit char: a
-                      REL_EXPR
-                        ADD_EXPR
-                          FAC
-                            lit char: c
-            EXPR_OPT
-              EXPR
-                OR_EXPR
-                  AND_EXPR
-                    COND_EXPR
-                      LEQ
-                        REL_EXPR
-                          ADD_EXPR
-                            FAC
-                              lit char: a
-                        ADD_EXPR
-                          FAC
-                            lit char: c
-            EXPR_OPT
-              ASSIGN
-                OR_EXPR
-                  AND_EXPR
-                    COND_EXPR
-                      REL_EXPR
-                        ADD_EXPR
-                          FAC
-                            lit string: fuck
-                EXPR
-                  OR_EXPR
-                    AND_EXPR
-                      COND_EXPR
-                        REL_EXPR
-                          ADD_EXPR
-                            FAC
-                              NEG
-                                func call
-                                  id: func
-                                  ARGS
-                                    EXPR
-                                      OR_EXPR
-                                        AND_EXPR
-                                          COND_EXPR
-                                            REL_EXPR
-                                              ADD_EXPR
-                                                FAC
-                                                  id: Ass
-            COMP_STMT
-              LOCAL_VAR_DEFS
-              STMTS
-                WHILE_STMT
-                  ASSIGN
-                    OR_EXPR
-                      AND_EXPR
-                        COND_EXPR
-                          REL_EXPR
-                            ADD_EXPR
-                              FAC
-                                id: x
-                    EXPR
-                      OR_EXPR
-                        AND_EXPR
-                          COND_EXPR
-                            REL_EXPR
-                              ADD_EXPR
-                                FAC
-                                  NOT
-                                    id: y
-                  COMP_STMT
-                    LOCAL_VAR_DEFS
-                    STMTS
-                      STMT
-                        EXPR
-                          OR_EXPR
-                            AND_EXPR
-                              COND_EXPR
-                                REL_EXPR
-                                  ADD_EXPR
-                                    FAC
-                                      func call
-                                        id: printf
-                                        ARGS
-                                          EXPR
-                                            OR_EXPR
-                                              AND_EXPR
-                                                COND_EXPR
-                                                  REL_EXPR
-                                                    ADD_EXPR
-                                                      FAC
-                                                        lit string: %d
-                                          EXPR
-                                            OR_EXPR
-                                              AND_EXPR
-                                                COND_EXPR
-                                                  REL_EXPR
-                                                    ADD_EXPR
-                                                      FAC
-                                                        NEG
-                                                          id: x
+        语句列表
+          语句
+            赋值表达式
+              id: x
+              函数调用
+                id: getNum
+                实参列表
+          语句
+            赋值表达式
+              id: x
+              加
+                减
+                  加
+                    lit float: 1.240000
+                    lit int: 2
+                  lit float: 0.560000
+                id: x
+          语句
+            赋值表达式
+              id: x
+              负
+                id: x
+          语句
+            赋值表达式
+              id: x
+              函数调用
+                id: fun
+                实参列表
+                  函数调用
+                    id: fun
+                    实参列表
+                      id: x
+          语句
+            赋值表达式
+              id: n
+              除
+                加
+                  加
+                    乘
+                      乘
+                        乘
+                          乘
+                            id: x
+                            id: x
+                          id: x
+                        id: x
+                      id: x
+                    乘
+                      乘
+                        取余
+                          lit int: 2
+                          id: x
+                        id: x
+                      id: x
+                  id: x
+                加
+                  加
+                    乘
+                      乘
+                        乘
+                          id: x
+                          id: x
+                        id: x
+                      id: x
+                    乘
+                      乘
+                        lit int: 2
+                        id: x
+                      id: x
+                  lit int: 1
+          语句
+            函数调用
+              id: printf
+              实参列表
+                lit string: fib: %d
+                函数调用
+                  id: fib
+                  实参列表
+                    id: n
+          返回语句
+            lit int: 0

@@ -1,18 +1,59 @@
-int fib(int n, int m) {
-    while (n <= 2)
-        return 1;
-    if ("There was a farmer had a dog.")
-        return fib(n-1) + fib(n-2);
-    else if ('c') {
-        return WTF;
-    } else if ( 1 || 2 && 3 == 4*5) return _ass;
+char cmp(int lhs, int rhs) {
+    return lhsr<rhsr;
 }
-
+int x, y;
+char vis;
+int n;
 int main() {
-    int n, x;
-    x=getNum();
-    n=(x*x*x*x*x+2*x*x*x+x)/(x*x*x*x+2*x*x+1);
-    printf("fib: %d",fib(n));
-    for (;;) ;
+    while (n) {
+        char succ;
+        memset(r1, 0, sizeof(r1));
+        memset(r2, 0, sizeof(r2));
+        memset(ans, 0, sizeof(ans));
+        for (i=1; i<=n; i=i+1) {
+            r1=r2=i;
+        }
+        sort(r1+1, r1+n+1, cmp);
+        sort(r2+1, r2+n+1, cmp);
+        memset(vis, 0, sizeof(vis));
+        for (i=1; i<=n; i=i+1) {
+            int j;
+            for (j=r1l; j<=r1r; j=j+1) {
+                if (visj) conti();
+                visj=1;
+    
+            }
+            if (j>r1ir) {
+                succ=0;
+    
+            }
+            ansr1indx=j;
+        }
+        if (!succ) {
+            printf("IMPOSSIBLE\n");
+            cont();
+        }
+        memset(vis, 0, sizeof(vis));
+        for (i=1; i<=n; i=i+1) {
+            int j;
+            for (j=r2il; j<=r2ir; j=j+1) {
+                if (visj) conti();
+                visj=1;
+    
+            }
+            if (j>r2ir) {
+                succ=0;
+    
+            }
+            ans(r2(i)*ind)*y=j;
+        }
+        if (!succ) {
+            printf("IMPOSSIBLE\n");
+            
+        }
+        for (i=1; i<=n; i=i+1) {
+            print(ans(i),' ',ans(i), 'n');
+        }
+    }
     return 0;
 }
